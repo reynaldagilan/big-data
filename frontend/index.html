@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count Analyzer - Hadoop MapReduce Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Word Count Analyzer</h1>
+            <p class="subtitle">Distributed Data Processing with Hadoop MapReduce</p>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <h2>Upload Text File</h2>
+                <div class="upload-area">
+                    <input type="file" id="fileInput" accept=".txt" />
+                    <button onclick="uploadFile()">Analyze</button>
+                </div>
+            </section>
+            
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Total Words</h3>
+                        <p id="totalWords">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Unique Words</h3>
+                        <p id="uniqueWords">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Characters</h3>
+                        <p id="totalChars">0</p>
+                    </div>
+                </div>
+                
+                <div class="chart-section">
+                    <h3>Top Words Frequency</h3>
+                    <div id="wordChart" class="word-chart"></div>
+                </div>
+                
+                <div class="table-section">
+                    <h3>Word Frequency Table</h3>
+                    <table id="resultTable">
+                        <thead>
+                            <tr>
+                                <th>Word</th>
+                                <th>Count</th>
+                                <th>Frequency (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Big Data Word Count Analyzer. Powered by Hadoop MapReduce.</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
